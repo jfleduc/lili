@@ -124,7 +124,7 @@ cd ~/Downloads/lili-master
 mysql -u root -p
 ```
 
-To drop the existing database and user for a fresh reinstall:
+Only if you are doing a reinstall, drop the database and user you created during a previous run:
 
 ```
 source install/00-drop.sql
