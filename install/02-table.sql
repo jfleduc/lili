@@ -10,6 +10,7 @@ CREATE TABLE IF NOT EXISTS `lilidb`.`link` (
  `status`                   tinyint(1)   NOT NULL,
  `category`                 int          NOT NULL,
  `url`                      varchar(255) NOT NULL,
+ `description`              varchar(255) NOT NULL,
   PRIMARY KEY              `pk_link`     (`id`),
   INDEX                    `ix_link_sta` (`status`),
   INDEX                    `ix_link_cat` (`category`),

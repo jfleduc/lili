@@ -13,7 +13,7 @@ sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
 sudo dpkg-reconfigure iptables-persistent
 ```
 
-Install Apache2 version 2.4:
+Install Apache version 2.4:
 
 ```
 sudo apt-get install apache2
@@ -117,11 +117,22 @@ MySQL user password.
 
 ### 4. Create the database, tables, and database user
 
-Create the database, the tables, the user, and the user privileges:
+Start a MySQL shell:
 
 ```
 cd ~/Downloads/lili-master
 mysql -u root -p
+```
+
+To drop the existing database and user for a fresh reinstall:
+
+```
+source install/00-drop.sql
+```
+
+Create the database, the tables, the user, and the user privileges:
+
+```
 source install/01-database.sql
 source install/02-table.sql
 source install/03-user.sql
@@ -170,3 +181,20 @@ vi protected/config.php
 ```
 
 Put the same database name, database user name, and database user password in `/var/www/protected/config.php` as you chose for the user name and password in the install scripts.
+
+## Adding Categories
+
+You can add categories manually via MySQL. For example:
+
+```
+INSERT INTO `lilidb`.`category` (`description`) VALUES ('Technology');
+```
+
+
+## Adding Links
+
+You can add links manually via MySQL. For example:
+
+```
+INSERT INTO `lilidb`.`link` (`status`, `category`, `url`) VALUES (1, 2, 'http://msydqstlz2kzerdg.onion', 'Ahmia searches hidden services on the Tor network.');
+```
