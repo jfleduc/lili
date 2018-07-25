@@ -4,7 +4,20 @@
 
 ### 1. Build LAMP Stack
 
-Install Debian or Ubuntu Linux, Apache, MySQL, and PHP 7 on your server.
+Install Debian 9 "Stretch" Linux, Apache, MySQL, and PHP 7 on your server.
+
+Open firewall for HTTP input on port 80:
+
+```
+sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+sudo dpkg-reconfigure iptables-persistent
+```
+
+Install Apache2:
+
+```
+sudo apt-get install apache2
+```
 
 Note that MySQL is no longer included with Debian 9. You can install MySQL 5.7 from the MySQL APT repositories as follows:
 
@@ -20,6 +33,18 @@ sudo mysql_secure_installation
 
 For further documentation on installing MySQL, see
 [https://dev.mysql.com/downloads/repo/apt/](https://dev.mysql.com/downloads/repo/apt/).
+
+Install PHP 7:
+
+```
+sudo apt-get install php7.0 libapache2-mod-php7.0 php7.0-mysql
+```
+
+Restart Apache:
+
+```
+sudo systemctl restart apache2
+```
 
 ### 2. Download the application
 
