@@ -196,5 +196,5 @@ INSERT INTO `lilidb`.`category` (`description`) VALUES ('Technology');
 You can add links manually via MySQL. For example:
 
 ```
-INSERT INTO `lilidb`.`link` (`status`, `category`, `url`) VALUES (1, 2, 'http://msydqstlz2kzerdg.onion', 'Ahmia searches hidden services on the Tor network.');
+INSERT INTO `lilidb`.`link` (`status`, `category`, `url`, `description`) VALUES (1, 2, 'http://msydqstlz2kzerdg.onion', 'Ahmia searches hidden services on the Tor network.');
 ```
