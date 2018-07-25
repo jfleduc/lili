@@ -8,11 +8,24 @@ Install Debian or Ubuntu Linux, Apache, MySQL, and PHP 7 on your server.
 
 ### 2. Download the application
 
-Create and change into a directory where you are going to save your downloads. Download the application archive. For example:
+Create and change into a directory where you are going to save your downloads. Download the application archive. For an initial install:
 
 ```
 mkdir ~/Downloads
 cd ~/Downloads
+```
+
+For a reinstall:
+
+```
+cd ~/Downloads
+rm master.zip
+rm -rf lili-master
+```
+
+For either an install or a reinstall:
+
+```
 wget https://github.com/jfleduc/lili/archive/master.zip
 ```
 
