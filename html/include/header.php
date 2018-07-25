@@ -8,7 +8,7 @@
     <meta name="keywords" content="<?php echo KEYWORDS ?>">
     <style>
       <?php 
-	$themestyle = 'css/' . THEME '.css';
+	$themestyle = 'css/' . THEME . '.css';
         include ("$themestyle"); 
       ?>
     </style>
