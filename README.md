@@ -100,7 +100,7 @@ Copy the application materials to your web root directory:
 sudo cp -rf html/* /var/www/html/
 ```
 
-If you also want to install a new configuration file, copy the protected materials above your web root, where they cannot be directly access by the website visitor:
+If you also want to install a new configuration file, copy the protected materials above your web root, where they cannot be directly accessed by the website visitor:
 
 ```
 sudo cp -rf protected /var/www/
@@ -114,4 +114,4 @@ Edit the application configuration constants:
 vi protected/config.php
 ```
 
-Put the same database name, database user name, and database user password in `\var\www\protected/config.php` as you chose for the user name and password in the install scripts.
+Put the same database name, database user name, and database user password in `/var/www/protected/config.php` as you chose for the user name and password in the install scripts.
