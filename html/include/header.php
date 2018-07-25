@@ -9,7 +9,7 @@
     <style>
       <?php 
 	$themestyle = 'css/' . THEME '.css';
-        include "$themestyle"; 
+        include ("$themestyle"); 
       ?>
     </style>
 </head>

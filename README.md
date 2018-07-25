@@ -68,17 +68,7 @@ source install/06-ri.sql
 exit
 ```
 
-### 4. Configure application
-
-Edit the application configuration constants:
-
-```
-vi protected/config.php
-```
-
-Put the same database name, database user name, and database user password in `protected/config.php` as you chose for the user name and password in the install scripts.
- 
-### 5. Copy the application to your web server
+### 4. Copy the application to your web server
 
 For a clean install, remove any existing files from the web root:
 
@@ -93,3 +83,13 @@ and the protected materials above your web root:
 sudo cp -rf html/* /var/www/html/
 sudo cp -rf protected /var/www/
 ```
+
+### 5. Configure application
+
+Edit the application configuration constants:
+
+```
+vi protected/config.php
+```
+
+Put the same database name, database user name, and database user password in `protected/config.php` as you chose for the user name and password in the install scripts.
