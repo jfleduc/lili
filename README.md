@@ -18,11 +18,12 @@ sudo apt-get install mysql-server mysql-client
 sudo mysql_secure_installation
 ```
 
-See [https://dev.mysql.com/downloads/repo/apt/](https://dev.mysql.com/downloads/repo/apt/) for further documentation.
+For further documentation on installing MySQL, see
+[https://dev.mysql.com/downloads/repo/apt/](https://dev.mysql.com/downloads/repo/apt/).
 
 ### 2. Download the application
 
-Create and change into a directory where you are going to save your downloads. For an initial install:
+If you have not already done so, create and change into a directory where you are going to save your downloads. For an initial install:
 
 ```
 mkdir ~/Downloads
