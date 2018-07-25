@@ -100,7 +100,7 @@ Copy the application materials to your web root directory:
 sudo cp -rf html/* /var/www/html/
 ```
 
-If you also want to install a new configuration file, copy the protected materials above your web root, where they cannot be directlt access by the website visitor:
+If you also want to install a new configuration file, copy the protected materials above your web root, where they cannot be directly access by the website visitor:
 
 ```
 sudo cp -rf protected /var/www/
