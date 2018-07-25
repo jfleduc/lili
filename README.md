@@ -49,7 +49,7 @@ Install PHP 7.0:
 sudo apt-get install php7.0 libapache2-mod-php7.0 php7.0-mysql
 ```
 
-Add `index.php` as a valid director name in `etc/apache2/apache2.conf`:
+Add `index.php` as a valid directory index name in `etc/apache2/apache2.conf`:
 
 ```
 DirectoryIndex index.php index.html
