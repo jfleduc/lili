@@ -6,6 +6,20 @@
 
 Install Debian or Ubuntu Linux, Apache, MySQL, and PHP 7 on your server.
 
+Note that MySQL is no longer included with Debian 9. You can install MySQL 5.7 from the MySQL APT repositories as follows:
+
+```
+mkdir ~/Downloads
+cd ~/Downloads
+wget https://dev.mysql.com/get/mysql-apt-config_0.8.10-1_all.deb
+sudo dpkg -i mysql-apt-config_0.8.10-1_all.deb
+sudo apt-get update
+sudo apt-get install mysql-server mysql-client
+sudo mysql_secure_installation
+```
+
+See [https://dev.mysql.com/downloads/repo/apt/](https://dev.mysql.com/downloads/repo/apt/) for further documentation.
+
 ### 2. Download the application
 
 Create and change into a directory where you are going to save your downloads. For an initial install:

@@ -17,7 +17,6 @@ header("Cache-Control: max-age=30");
 include('include/header.php');
 ?>
 
-<p class="menubar"><a href="#">Submit URL</a></p>
 <h1><?php echo TITLE; ?></h1>
 <p class="tagline"><?php echo TAGLINE; ?></p>
 
