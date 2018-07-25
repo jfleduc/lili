@@ -5,4 +5,4 @@
  * before running this script.
  */
 
-GRANT SELECT, INSERT, UPDATE ON `lilidb`.* TO 'liliuser'@'localhost';
+GRANT SELECT ON `lilidb`.* TO 'liliuser'@'localhost';

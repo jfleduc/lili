@@ -145,7 +145,7 @@ Continuing in the MySQL shell, insert the initial rows into the database:
 source install/05-insert.sql
 ```
 
-Now that the initial row has been inserted, you can turn on referential integrity (RI) by adding the foreign key constraints:
+Turn on referential integrity (RI) by adding the foreign key constraints:
 
 ```
 source install/06-ri.sql 
