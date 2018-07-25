@@ -58,7 +58,7 @@ unzip master.zip
 
 This creates a directory `lili-master`.
 
-### 2. Edit the database scripts
+### 3. Edit the database scripts
 
 The `lili-master/install` directory contains MySQL scripts as follows:
 
@@ -75,12 +75,12 @@ The `lili-master/install` directory contains MySQL scripts as follows:
 Edit these files for your choice of database name, MySQL user name, and
 MySQL user password.
 
-### 3. Create the database, tables, and database user
+### 4. Create the database, tables, and database user
 
 Create the database, the tables, the user, and the user privileges:
 
 ```
-cd lili-master
+cd ~/Downloads/lili-master
 mysql -u root -p
 source install/01-database.sql
 source install/02-table.sql
@@ -101,7 +101,7 @@ source install/06-ri.sql
 exit
 ```
 
-### 4. Copy the application to your web server
+### 5. Copy the application to your web server
 
 For a clean install, remove any existing files from the web root:
 
@@ -121,7 +121,7 @@ If you also want to install a new configuration file, copy the protected materia
 sudo cp -rf protected /var/www/
 ```
 
-### 5. Configure application
+### 6. Configure application
 
 Edit the application configuration constants:
 

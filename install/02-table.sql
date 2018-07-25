@@ -22,8 +22,7 @@ CREATE TABLE IF NOT EXISTS `lilidb`.`link` (
 CREATE TABLE IF NOT EXISTS `lilidb`.`category` (
  `id`                       int          NOT NULL AUTO_INCREMENT, 
  `description`              varchar(255) NOT NULL,
-  PRIMARY KEY              `pk_category` (`id`),
-  INDEX                    `ix_cate_des` (`category`))
+  PRIMARY KEY              `pk_category` (`id`))
   ENGINE=InnoDB 
   AUTO_INCREMENT=1 
   DEFAULT CHARSET=utf8 
