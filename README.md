@@ -4,7 +4,7 @@
 
 ### 1. Build LAMP Stack
 
-Install Debian 9 "Stretch" Linux, Apache, MySQL, and PHP 7 on your server.
+Install Debian "Stretch" Linux 9, Apache 2, MySQL 8, and PHP 7 on your server.
 
 Open firewall for HTTP input on port 80:
 

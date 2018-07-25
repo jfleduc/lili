@@ -13,26 +13,14 @@ CREATE TABLE IF NOT EXISTS `lilidb`.`link` (
   PRIMARY KEY              `pk_link`     (`id`),
   INDEX                    `ix_link_sta` (`status`),
   INDEX                    `ix_link_cat` (`category`),
-  INDEX                    `ix_link_url` (`url`))
-  ENGINE=InnoDB 
-  AUTO_INCREMENT=1 
-  DEFAULT CHARSET=utf8 
-  COLLATE=utf8_unicode_ci;
+  INDEX                    `ix_link_url` (`url`));
 
 CREATE TABLE IF NOT EXISTS `lilidb`.`category` (
  `id`                       int          NOT NULL AUTO_INCREMENT, 
  `description`              varchar(255) NOT NULL,
-  PRIMARY KEY              `pk_category` (`id`))
-  ENGINE=InnoDB 
-  AUTO_INCREMENT=1 
-  DEFAULT CHARSET=utf8 
-  COLLATE=utf8_unicode_ci;
+  PRIMARY KEY              `pk_category` (`id`));
 
 CREATE TABLE IF NOT EXISTS `lilidb`.`status` (
  `id`                       tinyint(1)   NOT NULL, 
  `description`              varchar(255) NOT NULL,
-  PRIMARY KEY              `pk_status`   (`id`))
-  ENGINE=InnoDB 
-  AUTO_INCREMENT=1 
-  DEFAULT CHARSET=utf8 
-  COLLATE=utf8_unicode_ci;
+  PRIMARY KEY              `pk_status`   (`id`));
