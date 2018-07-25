@@ -13,7 +13,7 @@ sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
 sudo dpkg-reconfigure iptables-persistent
 ```
 
-Install Apache2:
+Install Apache2 version 2.4:
 
 ```
 sudo apt-get install apache2
@@ -40,6 +40,12 @@ Install PHP 7:
 sudo apt-get install php7.0 libapache2-mod-php7.0 php7.0-mysql
 ```
 
+Add `index.php` as a valid director name in `etc/apache2/apache2.conf`:
+
+```
+DirectoryIndex index.php index.html
+```
+ 
 Restart Apache:
 
 ```
