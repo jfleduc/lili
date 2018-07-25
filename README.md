@@ -19,7 +19,7 @@ Install Apache2 version 2.4:
 sudo apt-get install apache2
 ```
 
-Note that MySQL is no longer included with Debian 9. You can install MySQL 5.7 from the MySQL APT repositories as follows:
+Note that MySQL is no longer included with Debian 9. You can install MySQL 8.0 from the MySQL APT repositories as follows:
 
 ```
 mkdir ~/Downloads
@@ -28,13 +28,22 @@ wget https://dev.mysql.com/get/mysql-apt-config_0.8.10-1_all.deb
 sudo dpkg -i mysql-apt-config_0.8.10-1_all.deb
 sudo apt-get update
 sudo apt-get install mysql-server mysql-client
+```
+
+During the install, You are prompted to enter a root password twice.
+
+For safety, select legacy authentication method (compatible with MySQL 5.0 and up).
+
+Then secure your MySQL installation:
+
+```
 sudo mysql_secure_installation
 ```
 
 For further documentation on installing MySQL, see
 [https://dev.mysql.com/downloads/repo/apt/](https://dev.mysql.com/downloads/repo/apt/).
 
-Install PHP 7:
+Install PHP 7.0:
 
 ```
 sudo apt-get install php7.0 libapache2-mod-php7.0 php7.0-mysql
