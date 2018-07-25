@@ -30,9 +30,9 @@ sudo apt-get update
 sudo apt-get install mysql-server mysql-client
 ```
 
-During the install, You are prompted to enter a root password twice.
+During the install, you are prompted to enter a root password twice.
 
-For safety, select legacy authentication method (compatible with MySQL 5.0 and up).
+For safety, select the legacy authentication method (compatible with MySQL 5.0 and up).
 
 Then secure your MySQL installation:
 
@@ -40,7 +40,7 @@ Then secure your MySQL installation:
 sudo mysql_secure_installation
 ```
 
-For further documentation on installing MySQL, see
+For further documentation on installing MySQL from the MySQL APT repositories, see
 [https://dev.mysql.com/downloads/repo/apt/](https://dev.mysql.com/downloads/repo/apt/).
 
 Install PHP 7.0:
