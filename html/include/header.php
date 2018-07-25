@@ -7,7 +7,10 @@
     <meta name="description" content="<?php echo DESCRIPTION ?>">
     <meta name="keywords" content="<?php echo KEYWORDS ?>">
     <style>
-      <?php include '/css/THEME.css'; ?>
+      <?php 
+	$themestyle = 'css/' . THEME '.css';
+        include "$themestyle"; 
+      ?>
     </style>
 </head>
 <body>

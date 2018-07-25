@@ -27,7 +27,7 @@ This creates a directory `lili-master`.
 
 ### 2. Edit the database scripts
 
-The `install` directory contains MySQL scripts as follows:
+The `lili-master/install` directory contains MySQL scripts as follows:
 
 |Script            |Function                                     |
 |------------------|---------------------------------------------|
@@ -39,7 +39,7 @@ The `install` directory contains MySQL scripts as follows:
 |`05-insert.sql`   |Insert initial rows                          |
 |`06-ri.sql`       |Add foreign key for referential integrity    |
 
-Make changes for your choice of database name, MySQL user name, and
+Edit these files for your choice of database name, MySQL user name, and
 MySQL user password.
 
 ### 3. Create the database
@@ -47,7 +47,7 @@ MySQL user password.
 Create the database, the tables, the user, and the user privileges:
 
 ```
-cd ~/Downloads/lili-master
+cd lili-master
 mysql -u root -p
 source install/01-database.sql
 source install/02-table.sql
@@ -73,15 +73,21 @@ exit
 Edit the application configuration constants:
 
 ```
-sudo vi protected/config.php
+vi protected/config.php
 ```
 
-Put the same database user name name and password in `protected/config.php` as you chose for the username and password in the install scripts.
+Put the same database name, database user name, and database user password in `protected/config.php` as you chose for the user name and password in the install scripts.
  
 ### 5. Copy the application to your web server
 
+For a clean install, remove any existing files from the web root:
+
+```
+sudo rm -rf /var/www/html/*.*
+```
+
 Copy the application materials to your web root directory, 
-and the protected materials above your web root.
+and the protected materials above your web root:
 
 ```
 sudo cp -rf html/* /var/www/html/
