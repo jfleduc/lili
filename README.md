@@ -8,7 +8,7 @@ Install Debian or Ubuntu Linux, Apache, MySQL, and PHP 7 on your server.
 
 ### 2. Download the application
 
-Create and change into a directory where you are going to save your downloads. Download the application archive. For an initial install:
+Create and change into a directory where you are going to save your downloads. For an initial install:
 
 ```
 mkdir ~/Downloads
@@ -29,10 +29,15 @@ For either an install or a reinstall:
 wget https://github.com/jfleduc/lili/archive/master.zip
 ```
 
-Unzip the compressed archive:
+If you do not already have the `unzip` package on your server:
 
 ```
 sudo apt-get install unzip
+```
+
+For both an initial install and a reinstall, unzip the compressed archive:
+
+```
 unzip master.zip
 ```
 
@@ -55,7 +60,7 @@ The `lili-master/install` directory contains MySQL scripts as follows:
 Edit these files for your choice of database name, MySQL user name, and
 MySQL user password.
 
-### 3. Create the database
+### 3. Create the database, tables, and database user
 
 Create the database, the tables, the user, and the user privileges:
 
@@ -89,11 +94,15 @@ For a clean install, remove any existing files from the web root:
 sudo rm -rf /var/www/html/*.*
 ```
 
-Copy the application materials to your web root directory, 
-and the protected materials above your web root:
+Copy the application materials to your web root directory:
 
 ```
 sudo cp -rf html/* /var/www/html/
+```
+
+If you also want to install a new configuration file, copy the protected materials above your web root, where they cannot be directlt access by the website visitor:
+
+```
 sudo cp -rf protected /var/www/
 ```
 
@@ -105,4 +114,4 @@ Edit the application configuration constants:
 vi protected/config.php
 ```
 
-Put the same database name, database user name, and database user password in `protected/config.php` as you chose for the user name and password in the install scripts.
+Put the same database name, database user name, and database user password in `\var\www\protected/config.php` as you chose for the user name and password in the install scripts.
