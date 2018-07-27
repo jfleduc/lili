@@ -22,6 +22,24 @@ include('include/header.php');
 
 <?php
 /**
+ * Loop through all categories in the database
+ */
+?>
+
+<?php
+/**
+ * If the category is non-empty, display it
+ */
+?>
+
+<?php
+/**
+ * Loop through all links in the category
+ */
+?>
+
+<?php
+/**
  * Include the page footer that ends the HTML for this page
  */
 include('include/footer.php');
