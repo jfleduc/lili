@@ -63,34 +63,19 @@ sudo systemctl restart apache2
 
 ### 2. Download the application
 
-If you have not already done so, create and change into a directory where you are going to save your downloads. For an initial install:
-
-```
-mkdir ~/Downloads
-cd ~/Downloads
-```
-
-For a reinstall:
-
-```
-cd ~/Downloads
-rm master.zip
-rm -rf lili-master
-```
-
-For either an install or a reinstall:
+Get the application archive from Github:
 
 ```
 wget https://github.com/jfleduc/lili/archive/master.zip
 ```
 
-If you do not already have the `unzip` package on your server:
+If you do not already have the `unzip` package on your serveri, install it now:
 
 ```
 sudo apt-get install unzip
 ```
 
-For both an initial install and a reinstall, unzip the compressed archive:
+Unzip the compressed archive:
 
 ```
 unzip master.zip
@@ -124,7 +109,7 @@ cd ~/Downloads/lili-master
 mysql -u root -p
 ```
 
-Only if you are doing a reinstall, drop the database and user you created during a previous run:
+Only if you are doing a reinstall, drop the database and user you created during the previous run:
 
 ```
 source install/00-drop.sql
@@ -181,6 +166,17 @@ vi protected/config.php
 ```
 
 Put the same database name, database user name, and database user password in `/var/www/protected/config.php` as you chose for the user name and password in the install scripts.
+
+### 7. Varnish (Optional)
+
+Install and configure Varnish in front of Apache:
+
+1. Configure Apache to listen on port 8080
+2. Restart Apache
+3. Install Varnish
+4. Configure Varnish to listen on port 80
+5. Configure Varnish to use Apache as a backend on localhost port 8080
+6. Restart Varnish
 
 ## Adding Categories
 
