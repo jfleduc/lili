@@ -19,7 +19,8 @@ CREATE TABLE IF NOT EXISTS `lilidb`.`link` (
 CREATE TABLE IF NOT EXISTS `lilidb`.`category` (
  `id`                       int          NOT NULL AUTO_INCREMENT, 
  `description`              varchar(255) NOT NULL,
-  PRIMARY KEY              `pk_category` (`id`));
+  PRIMARY KEY              `pk_category` (`id`),
+  INDEX                    `ix_cate_des` (`description`));
 
 CREATE TABLE IF NOT EXISTS `lilidb`.`status` (
  `id`                       tinyint(1)   NOT NULL, 

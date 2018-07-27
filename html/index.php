@@ -21,21 +21,28 @@ include('include/header.php');
 <p class="tagline"><?php echo TAGLINE; ?></p>
 
 <?php
-/**
- * Loop through all categories in the database
- */
-?>
-
-<?php
-/**
- * If the category is non-empty, display it
- */
-?>
-
-<?php
-/**
- * Loop through all links in the category
- */
+// Loop through all category in the database
+try
+  {
+    $query = $dbconn->prepare('SELECT `id`,
+                                      `description`
+                                FROM  `category`
+                            ORDER BY  `description` ASC');
+    // Loop through all rows in the result set
+    if ($query->execute())
+      {
+        while ($row = $query->fetch(PDO::FETCH_ASSOC))
+          {
+            echo '<h2>' . $row['description'] . '</h2>';
+          }
+      }	
+  }
+catch (PDOException $exception)
+  {
+    $logdata = $exception->getCode() . ' ' . $exception->getMessage();
+    error_log ($logdata);
+    die ('Please contact an administrator.');
+  }
 ?>
 
 <?php
