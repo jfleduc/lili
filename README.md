@@ -139,7 +139,7 @@ exit
 
 ### 5. Copy the application to your web server
 
-For a clean install, remove any existing files from the web root:
+Remove any existing files from the web root:
 
 ```
 sudo rm -rf /var/www/html/*.*
@@ -151,7 +151,7 @@ Copy the application materials to your web root directory:
 sudo cp -rf html/* /var/www/html/
 ```
 
-If you also want to install a new configuration file, copy the protected materials above your web root, where they cannot be directly accessed by the website visitor:
+Copy the protected materials above your web root, where they cannot be directly accessed by the website visitor:
 
 ```
 sudo cp -rf protected /var/www/

@@ -5,9 +5,6 @@ define("TAGLINE",      "The link lister");
 define("DESCRIPTION",  "Link lister");
 define("KEYWORDS",     "link,lister");
 define("THEME",        "silver");
-?>
-
-<?php
 /**
   * Constants the application uses to connect to the database.
   *

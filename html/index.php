@@ -3,14 +3,14 @@
  * Set all the constants in the configuration
  */
 require_once('../protected/config.php');
-?>
-<?php
+/**
+ * Open the connection to the database
+ */
+require_once('../protected/dbconn.php');
 /**
  * Set the amount of time for the user's browser to cache this page
  */
 header("Cache-Control: max-age=30");
-?>
-<?php
 /**
  * Include the page header that starts the HTML for this page
  */
