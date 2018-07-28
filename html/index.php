@@ -8,6 +8,14 @@ require_once('../protected/config.php');
  */
 require_once('../protected/dbconn.php');
 /**
+ * Include the functions related to category
+ */
+include('function/category_has_links.php');
+include('function/list_links_in_category.php');
+?>
+
+<?php
+/**
  * Set the amount of time for the user's browser to cache this page
  */
 header("Cache-Control: max-age=30");
@@ -33,7 +41,13 @@ try
       {
         while ($row = $query->fetch(PDO::FETCH_ASSOC))
           {
-            echo '<h2>' . $row['description'] . '</h2>';
+            $category_id   = $row['id'];
+            $category_desc = $row['description'];
+            if (category_has_links($dbconn, $category_id)) 
+              {
+                echo '<h2>' . $category_desc . '</h2>';
+                list_links_in_category ($dbconn, $category_id);
+              }
           }
       }	
   }
