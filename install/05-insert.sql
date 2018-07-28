@@ -13,7 +13,4 @@ START TRANSACTION;
 INSERT INTO `lilidb`.`category`           (`description`)
                                    VALUES ('Unclassified');
 
-INSERT INTO `lilidb`.`status`             (`id`, `description`)
-                                   VALUES (  1,  'Default');
-
 COMMIT;

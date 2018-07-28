@@ -7,12 +7,10 @@
 
 CREATE TABLE IF NOT EXISTS `lilidb`.`link` (
  `id`                       int          NOT NULL AUTO_INCREMENT, 
- `status`                   tinyint(1)   NOT NULL,
  `category`                 int          NOT NULL,
  `url`                      varchar(255) NOT NULL,
  `description`              varchar(255) NOT NULL,
   PRIMARY KEY              `pk_link`     (`id`),
-  INDEX                    `ix_link_sta` (`status`),
   INDEX                    `ix_link_cat` (`category`),
   INDEX                    `ix_link_url` (`url`));
 
@@ -21,8 +19,3 @@ CREATE TABLE IF NOT EXISTS `lilidb`.`category` (
  `description`              varchar(255) NOT NULL,
   PRIMARY KEY              `pk_category` (`id`),
   INDEX                    `ix_cate_des` (`description`));
-
-CREATE TABLE IF NOT EXISTS `lilidb`.`status` (
- `id`                       tinyint(1)   NOT NULL, 
- `description`              varchar(255) NOT NULL,
-  PRIMARY KEY              `pk_status`   (`id`));

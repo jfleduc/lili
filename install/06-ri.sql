@@ -10,12 +10,6 @@ SET AUTOCOMMIT=0;
 START TRANSACTION;
 
 ALTER TABLE `lilidb`.`link` 
-  ADD CONSTRAINT fk_link_status
-      FOREIGN KEY                       (`status`) 
-      REFERENCES    `lilidb`.`status`   (`id`);
-
-
-ALTER TABLE `lilidb`.`link` 
   ADD CONSTRAINT fk_link_category
       FOREIGN KEY                       (`category`) 
       REFERENCES    `lilidb`.`category` (`id`);
