@@ -16,10 +16,6 @@ include('function/list_links_in_category.php');
 
 <?php
 /**
- * Set the amount of time for the user's browser to cache this page
- */
-header("Cache-Control: max-age=30");
-/**
  * Include the page header that starts the HTML for this page
  */
 include('include/header.php');
