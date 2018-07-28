@@ -171,12 +171,12 @@ Put the same database name, database user name, and database user password in `/
 
 Install and configure Varnish in front of Apache:
 
-1. Configure Apache to listen on port 8080
-2. Restart Apache
-3. Install Varnish
-4. Configure Varnish to listen on port 80
-5. Configure Varnish to use Apache as a backend on localhost port 8080
-6. Restart Varnish
+1. Configure Apache to listen on localhost (`127.0.0.1`) port `8080` by editing `/etc/apache2/ports.conf` and `/etc/apache2/sites-enabled/000-default.conf`
+2. Restart Apache with `sudo systemctl restart apache2`
+3. Install Varnish with `sudo apt-get install varnish`
+4. Configure Varnish to listen on port 80 by editing `/lib/systemd/system/varnish.service`
+5. Configure Varnish to use Apache as `backend default` on host `127.0.0.1` port `8080` by editing `/etc/varnish/default.vcl`
+6. Restart Varnish with `sudo systemctl restart varnish`
 
 ## Adding Categories
 
