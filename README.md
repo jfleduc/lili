@@ -174,9 +174,10 @@ Install and configure Varnish in front of Apache:
 1. Configure Apache to listen on localhost (`127.0.0.1`) port `8080` by editing `/etc/apache2/ports.conf` and `/etc/apache2/sites-enabled/000-default.conf`
 2. Restart Apache with `sudo systemctl restart apache2`
 3. Install Varnish with `sudo apt-get install varnish`
-4. Configure Varnish to listen on port `80` instead of the default `6081` by editing `/lib/systemd/system/varnish.service`
-5. Make sure that Varnish is configured to use Apache as `backend default` on host `127.0.0.1` port `8080` in the configuration file `/etc/varnish/default.vcl`
+4. Configure Varnish to listen on port `80` instead of the default `6081` by editing `/lib/systemd/system/varnish.service`. You can also change the default memory allocation (`malloc`) in this file.
+5. Make sure that Varnish is configured to use Apache as `backend default` on host `127.0.0.1` port `8080` in the configuration file `/etc/varnish/default.vcl`. The default time to live (TTL) in the cache is `2m` (two minutes). You can change this with, e.g., `sub vcl_backend_response {set beresp.ttl = 5m;}`.
 6. Restart Varnish with `sudo systemctl daemon-reload` and `sudo systemctl restart varnish`
+7. Get statistics of cache hits vs. misses with, for example, `sudo varnishstat -1 | grep cache`.
 
 ## Adding Categories
 
