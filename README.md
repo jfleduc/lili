@@ -1,6 +1,10 @@
 # lili
 
+lili silver theme:
+
 ![lili silver theme](lili-screenshot-1.png?raw=true "lili silver theme")
+
+lili dark theme:
 
 ![lili dark theme](lili-screenshot-2.png?raw=true "lili dark theme")
 
@@ -182,6 +186,8 @@ Install and configure Varnish in front of Apache:
 5. Make sure that Varnish is configured to use Apache as `backend default` on host `127.0.0.1` port `8080` in the configuration file `/etc/varnish/default.vcl`. The default time to live (TTL) in the cache is `2m` (two minutes). You can change this with, e.g., `sub vcl_backend_response {set beresp.ttl = 5m;}`.
 6. Restart Varnish with `sudo systemctl daemon-reload` and `sudo systemctl restart varnish`
 7. Get statistics of cache hits vs. misses with, for example, `sudo varnishstat -1 | grep cache`.
+
+Performance with Varnish tested at [dotcom-tools.com](https://www.dotcom-tools.com/website-speed-test.aspx):
 
 ![Varnish performance](lili-screenshot-3.png?raw=true "Varnish performance")
 
